@@ -1,17 +1,1 @@
-automation:        UiAutomator2
-remoteUrl:         http://127.0.0.1:4723/wd/hub
-device:            android
-deviceVer:         '12'
-udid:              emulator-5554
-systemPort:        8201
-appPackage:        com.cimbthai.digital.mycimb.sit
-# appActivity:       mycimb.digital.cimbthai.com.base.onboard.guidelinev2.GuidelineV2Activity   #mycimb.digital.cimbthai.com.base.verifyonboard.VerifyOnboardActivity
-app:                /Users/2202040/Documents/Test App/app-sitcloud-release-android.apk
-global_timeout:    60
-retry:             30x
-retry_interval:    1s
-permissions:       true
-host:              cbdigital-cimbth-sit01.ckhwrzmgqvhp.ap-southeast-1.rds.amazonaws.com
-port:              3306
-user:              digi_qabot
-pass:              P@ssw0rd#123
+
