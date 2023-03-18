@@ -1,0 +1,17 @@
+automation:        xcuitest
+remoteUrl:         http://127.0.0.1:4723/wd/hub
+device:            ios
+deviceVer:         '15.2'
+udid:              1AA402B9-947C-418C-A181-4159F0865CD3
+wdaLocalPort:      8100
+app:               /Users/2202040/Documents/Test App/tako_ios_superapp_sit_cloud.app
+alert:             true
+autoAcceptAlerts:  false
+global_timeout:    60
+retry:             60x
+retry_interval:    1s
+permissions:       '{"com.cimbthai.digital.tako.dev": {"photos": "YES", "userTracking": "YES", "notifications": "YES"}}'
+host:              cbdigital-cimbth-sit01.ckhwrzmgqvhp.ap-southeast-1.rds.amazonaws.com
+port:              3306
+user:              digi_qabot
+pass:              P@ssw0rd#123
