@@ -4,7 +4,6 @@ device:            android
 deviceVer:         '12'
 udid:              emulator-5554
 systemPort:        8201
-appPackage:        com.cimbthai.digital.mycimb.sit
 app:               /Users/paponsupamongkonchai/ProjectRobot/AppFile/AndroidAPKFile/app-debug.apk
 global_timeout:    60
 retry:             30x
