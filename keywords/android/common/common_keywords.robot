@@ -1,3 +1,5 @@
+*** Settings ***
+Resource    Resource          ../resources/import.robot
 *** Keywords ***
 Install And Open App
     Open Application    ${remoteUrl}
@@ -24,3 +26,7 @@ Open App
     ...                 launchTimeout=48000
     ...                 appWaitActivity=*
     ...                 noReset=true
+
+Wait Until Element Is Ready 
+    [Arguments]    ${locator}
+    Wait Until Keyword Succeeds      ${retry}      ${retry_interval}     Element Should Be Visible     ${locator}
