@@ -16,7 +16,7 @@ Install And Open App
     ...                 waitForQuiescence=false
     ...                 newCommandTimeout=80000
     ...                 launchTimeout=80000
-    ...                 permissions=${permissions}
+    # ...                 permissions=${permissions}
     ...                 showIOSLog=true
 
 Open App
@@ -32,6 +32,6 @@ Open App
     ...                 appWaitActivity=*
     ...                 noReset=true
 
-    Wait Until Element Is Ready 
+Wait Until Element Is Ready 
     [Arguments]    ${locator}
-    Wait Until Keyword Succeeds      ${retry}      ${retry_interval}     Element Should Be Visible
+    Wait Until Keyword Succeeds      ${retry}      ${retry_interval}     Element Should Be Visible     ${locator}

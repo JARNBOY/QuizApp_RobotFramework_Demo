@@ -10,3 +10,4 @@ autoAcceptAlerts:  false
 global_timeout:    60
 retry:             60x
 retry_interval:    1s
+# permissions:       true

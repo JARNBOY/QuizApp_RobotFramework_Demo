@@ -5,12 +5,12 @@ Resource          ${CURDIR}/../../../../resources/import_pages.robot
 Variables         ${CURDIR}/../../resources/test_data/${platform}/userPlayQuiz.yaml
 
 *** Variables ***
-${mainPage.titleQuiz}                    xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.TextView                
-${mainPage.titleWelcome}                 xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.cardview.widget.CardView/android.widget.LinearLayout/android.widget.TextView[1]
-${mainPage.descTitle}                    xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.cardview.widget.CardView/android.widget.LinearLayout/android.widget.TextView[2]
-${mainPage.editTextInputName}            xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.cardview.widget.CardView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.EditText    
-${mainPage.btnStart}                     xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.cardview.widget.CardView/android.widget.LinearLayout/android.widget.Button
-   
+${mainPage.titleQuiz}                    xpath=//XCUIElementTypeStaticText[@name="Quiz App!"]                
+${mainPage.titleWelcome}                 xpath=//XCUIElementTypeStaticText[@name="Welcome"]
+${mainPage.descTitle}                    xpath=//XCUIElementTypeStaticText[@name="Please Enter Your Name.."]
+${mainPage.editTextInputName}            xpath=//XCUIElementTypeApplication[@name="Quiz App"]/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeTextField
+${mainPage.btnStart}                     xpath=//XCUIElementTypeButton[@name="START"]
+${mainPage.enterKeyborad}                xpath=//XCUIElementTypeButton[@name="Return"]
 
 *** Keywords ***
 Verify Input Name
@@ -32,4 +32,7 @@ Verify Input Name
 Verify Start Quiz
     common_keywords.Wait Until Element Is Ready     ${mainPage.editTextInputName} 
     common_keywords.Wait Until Element Is Ready     ${mainPage.btnStart}
+    common_keywords.Wait Until Element Is Ready     ${mainPage.enterKeyborad}
+
+    Click Element                    ${mainPage.enterKeyborad}
     Click Element                    ${mainPage.btnStart}
