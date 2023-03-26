@@ -1,7 +1,7 @@
 Robot framwork - Mobile Automation
 =================================
 ## This workshop is part of shreknowledge my blog 
-(link)
+[(link)](https://medium.com/@paponsmc/appium-robot-framework-step-by-step-zero-to-hero-ui-automate-test-for-mobile-app-ios-android-f3a012b4afe2)
 
 ## Folder Pattern for Test Case / Object Repository
 
